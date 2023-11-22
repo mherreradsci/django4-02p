@@ -12,6 +12,7 @@ services:
       - 8000:8000
     volumes:
       - ./app:/app
+      - ./data/web:/vol/web
     environment:
       - SECRET_KEY=not_important_dev_skey
       - DEBUG=1
