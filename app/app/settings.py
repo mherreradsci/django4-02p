@@ -33,6 +33,7 @@ ALLOWED_HOSTS.extend(
     )
 )
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -86,7 +87,6 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASS'),
-
     }
 }
 
@@ -119,16 +119,17 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/static/' # For Images, JS files, Templates
-MEDIA_URL = '/static/media/' # Media files uploded by the user
+STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
 
-# File system for static and media
 MEDIA_ROOT = '/vol/web/media'
 STATIC_ROOT = '/vol/web/static'
 
